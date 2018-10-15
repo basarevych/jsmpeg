@@ -787,6 +787,7 @@ MPEG1.prototype.decodeBlock = function(block) {
 		}
 
 		n += run;
+        if (n < 0 || n >= MPEG1.ZIG_ZAG.length) break;
 		var dezigZagged = MPEG1.ZIG_ZAG[n];
 		n++;
 
